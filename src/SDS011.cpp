@@ -38,7 +38,7 @@ void SDS011::begin()
     Serial1.begin(9600);
 }
 
-void SDS011::read(float *p25, float *p10) {
+int SDS011::read(float *p25, float *p10) {
 	byte buffer;
 	int value;
 	int len = 0;
