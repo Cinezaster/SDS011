@@ -1,6 +1,6 @@
 // Example usage for SDS011 library by toon nelissen.
 
-#include "SDS011.h"
+#include <SDS011.h>
 
 float p10,p25;
 int error;
@@ -19,5 +19,9 @@ void loop() {
 		Serial.println("P2.5: "+String(p25));
 		Serial.println("P10:  "+String(p10));
 	}
-	delay(100);
+	delay(1000);
+	dustSensor.sleep();
+	delay(5000);
+	dustSensor.wakeup();
+	delay(10000); // wait a bit to get a better reading
 }

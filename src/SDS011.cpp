@@ -69,7 +69,6 @@ int SDS011::read(float *p25, float *p10) {
 			len = 0; checksum_ok = 0; pm10_serial = 0.0; pm25_serial = 0.0; checksum_is = 0;
 			error = 0;
 		}
-		yield();
 	}
 	return error;
 }
